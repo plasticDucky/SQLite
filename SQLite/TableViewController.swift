@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SQLite3 // <----
 
 class TableViewController: UITableViewController {
 
+    @IBOutlet var tvListView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
