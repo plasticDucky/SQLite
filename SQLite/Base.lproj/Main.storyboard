@@ -44,12 +44,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hT-Ty-hoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-27"/>
+            <point key="canvasLocation" x="491" y="-27"/>
         </scene>
         <!--Add View-->
         <scene sceneID="KVu-DS-yfj">
             <objects>
-                <viewController id="TK8-yb-PsE" sceneMemberID="viewController">
+                <viewController id="TK8-yb-PsE" customClass="AddViewController" customModule="SQLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YS1-W6-iE4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
         <!--Detail View-->
         <scene sceneID="r9P-tB-pkk">
             <objects>
-                <viewController id="GFg-2v-ttF" sceneMemberID="viewController">
+                <viewController id="GFg-2v-ttF" customClass="DetailViewController" customModule="SQLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CBf-cV-mZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,6 +15,7 @@
 		A4538B362867FF4A00ED10F5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4538B352867FF4A00ED10F5 /* TableViewController.swift */; };
 		A4EA8C1328680240009A2CFA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EA8C1228680240009A2CFA /* AddViewController.swift */; };
 		A4EA8C152868024D009A2CFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EA8C142868024D009A2CFA /* DetailViewController.swift */; };
+		A4EA8C172868068A009A2CFA /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EA8C162868068A009A2CFA /* Students.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A4538B352867FF4A00ED10F5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A4EA8C1228680240009A2CFA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		A4EA8C142868024D009A2CFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A4EA8C162868068A009A2CFA /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A4EA8C142868024D009A2CFA /* DetailViewController.swift */,
 				A4538B352867FF4A00ED10F5 /* TableViewController.swift */,
 				A4538B272867FF0E00ED10F5 /* Main.storyboard */,
+				A4EA8C162868068A009A2CFA /* Students.swift */,
 				A4538B2A2867FF1100ED10F5 /* Assets.xcassets */,
 				A4538B2C2867FF1100ED10F5 /* LaunchScreen.storyboard */,
 				A4538B2F2867FF1100ED10F5 /* Info.plist */,
@@ -147,6 +150,7 @@
 				A4538B222867FF0E00ED10F5 /* AppDelegate.swift in Sources */,
 				A4538B362867FF4A00ED10F5 /* TableViewController.swift in Sources */,
 				A4EA8C152868024D009A2CFA /* DetailViewController.swift in Sources */,
+				A4EA8C172868068A009A2CFA /* Students.swift in Sources */,
 				A4EA8C1328680240009A2CFA /* AddViewController.swift in Sources */,
 				A4538B242867FF0E00ED10F5 /* SceneDelegate.swift in Sources */,
 			);
