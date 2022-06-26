@@ -11,6 +11,9 @@ import SQLite3 // <----
 class TableViewController: UITableViewController {
 
     @IBOutlet var tvListView: UITableView!
+    
+    var db: OpaquePointer?
+    var studentsList : [Students] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
