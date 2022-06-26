@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="GFg-2v-ttF" kind="show" id="8mj-FF-i6Z"/>
+                                    <segue destination="GFg-2v-ttF" kind="show" identifier="sgDetail" id="8mj-FF-i6Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,6 +78,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="입력"/>
+                                <connections>
+                                    <action selector="btnInsert:" destination="TK8-yb-PsE" eventType="touchUpInside" id="ZbV-g2-sO5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성명 : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zy-Kh-pOk">
                                 <rect key="frame" x="103" y="152" width="43" height="21"/>
@@ -137,6 +140,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add View" id="DDq-Hz-D09"/>
+                    <connections>
+                        <outlet property="tfDept" destination="EdY-bn-N9S" id="1qz-jw-AZJ"/>
+                        <outlet property="tfName" destination="6yW-Qt-8Ud" id="Vlk-S0-4j3"/>
+                        <outlet property="tfTel" destination="dFn-6r-91r" id="Bed-mr-Upd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skg-m5-fMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,6 +216,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="수정"/>
+                                <connections>
+                                    <action selector="btnUpdate:" destination="GFg-2v-ttF" eventType="touchUpInside" id="d6h-Jd-VkB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="학번 : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGx-bO-ExT">
                                 <rect key="frame" x="103" y="130" width="43" height="21"/>
@@ -227,12 +238,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="삭제"/>
+                                <connections>
+                                    <action selector="btnDelete:" destination="GFg-2v-ttF" eventType="touchUpInside" id="AND-EF-xSc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nk7-op-ICH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail View" id="wnw-4j-7Gr"/>
+                    <connections>
+                        <outlet property="tfDept" destination="IZE-b5-0ym" id="hXC-rw-ybb"/>
+                        <outlet property="tfId" destination="gL0-Wg-3Hl" id="dZB-kw-YYD"/>
+                        <outlet property="tfName" destination="TU3-32-qMf" id="Z80-m7-Xer"/>
+                        <outlet property="tfTel" destination="exE-aW-mAf" id="VmD-OF-DNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOv-pY-ISe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

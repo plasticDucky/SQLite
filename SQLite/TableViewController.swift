@@ -35,18 +35,21 @@ class TableViewController: UITableViewController {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("err creating table : \(errmsg)")
         }
-        
-        // Temporary Insert
-        tempInsert()
-        
-        //DB 내용 불러오기
-        readValues()
+        //사실 에러처리 로직을 신경쓰지 않는다면 필수구문은 아래 두줄이 된다.
+        //sqlite3_open(fileURL.path, &db)
+        //sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS students (sid INTEGER PRIMARY KEY AUTOINCREMENT, sname TEXT, sdept TEXT, sphone TEXT)", nil, nil, nil)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //DB 내용 불러오기
+        readValues()
     }
 
     func tempInsert() {
@@ -143,17 +146,31 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let id = studentsList[indexPath.row].id
+            deleteAction(id: id)
+            readValues()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    func deleteAction(id : Int) {
+        var stmt : OpaquePointer?
+        let queryString = "DELETE FROM students WHERE sid = ?"
+        
+        sqlite3_prepare(db, queryString, -1, &stmt, nil)
+        
+        //stmt 몇번째냐?
+        sqlite3_bind_int(stmt, 1, Int32(id))
+        //step??
+        sqlite3_step(stmt)
+    }
 
     /*
     // Override to support rearranging the table view.
@@ -170,14 +187,26 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "sgDetail" {
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tvListView.indexPath(for: cell)
+            let detailView = segue.destination as! DetailViewController
+            
+            let sid = studentsList[indexPath!.row].id
+            let sname = studentsList[indexPath!.row].name
+            let sdept = studentsList[indexPath!.row].dept
+            let sphone = studentsList[indexPath!.row].phone
+            
+            detailView.receiveItems(sid, sname!, sdept!, sphone!)
+        }
     }
-    */
+    
 
 }
